@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatssap-Api</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <header class="sidebar-header">
+                <div class="header-content">
+                    <h3>CONVERSAS</h3>
+                    <div class="search-container">
+                        <img src="./icons8-pesquisar-50 (1).png" alt="Pesquisar" class="search-icon">
+                        <input type="text" placeholder="Digite o número (ex: 5511999999999)" class="numero-input">
+                        <button class="search-button" id="searchButton">Pesquisar</button>
+                    </div>
+                </div>
+            </header>
+            <div class="conversas-lista" id="conversasLista">
+        </div>
+    </div>
+    <div class="chat-area">
+        <div class="chat-header">
+            <h3 id="Chat">Selecione uma conversa</h3>
+        </div>
+        <div class="mensagens" id="mensagens">
+        </div>
+        <div class="messagem-input">
+                <input type="text" id="messagemInput" placeholder="Digite uma mensagem...">
+                <button id="Button">Enviar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

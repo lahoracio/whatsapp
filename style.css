@@ -1,0 +1,327 @@
+:root {
+  --whatsapp-green: #128C7E;
+  --whatsapp-light-green: #25D366;
+  --whatsapp-teal-green: #075E54;
+  --whatsapp-dark-green: #054D44;
+  --message-in: #ffffff;
+  --message-out: #DCF8C6;
+  --panel-bg: #F0F2F5;
+  --chat-bg: #E5DDD5;
+  --text-dark: #111B21;
+  --text-medium: #667781;
+  --text-light: #8696A0;
+  --border-color: #E9EDEF;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--chat-bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  width: 95%;
+  max-width: 1400px;
+  height: 95vh;
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Sidebar Modernizado */
+.sidebar {
+  width: 30%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--panel-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+.sidebar-header {
+  padding: 10px 16px;
+  background-color: var(--whatsapp-teal-green);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 15px;
+}
+
+.sidebar-header h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: 300px; /* Aumentamos para acomodar o botão */
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.numero-input {
+  flex: 1;
+    padding: 8px 15px 8px 36px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    outline: none;
+    font-size: 14px;
+    height: 36px;
+}
+
+.numero-input::placeholder{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+.search-button {
+  padding: 0 12px;
+  height: 36px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: #128C7E;
+}
+
+/* Ajuste para o ícone de pesquisa */
+.search-button {
+  padding: 0 8px;
+  height: 36px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Ajuste para o ícone de pesquisa */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  z-index: 1;
+}
+
+/* Lista de Contatos Modernizada */
+.conversas-lista {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.contact-item {
+  display: flex;
+  padding: 12px;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contact-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.contact-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-name {
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-last-msg {
+  font-size: 13px;
+  color: var(--text-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Área de Chat Modernizada */
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--chat-bg);
+  background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png');
+}
+
+.chat-header {
+  padding: 12px 16px;
+  background-color: var(--panel-bg);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-header h3 {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Mensagens Modernizadas */
+.mensagens {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+  position: relative;
+  word-wrap: break-word;
+  box-shadow: var(--shadow-sm);
+}
+
+.message-in {
+  background-color: var(--message-in);
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+.message-out {
+  background-color: var(--message-out);
+  align-self: flex-end;
+  border-top-right-radius: 0;
+}
+
+.message-time {
+  font-size: 11px;
+  color: var(--text-medium);
+  float: right;
+  margin-left: 8px;
+  margin-top: 4px;
+}
+
+/* Input Modernizado */
+.messagem-input {
+  padding: 12px 16px;
+  background-color: var(--panel-bg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.messagem-input input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s;
+}
+
+.messagem-input input:focus {
+  box-shadow: 0 0 0 2px var(--whatsapp-light-green);
+}
+
+.messagem-input button {
+  padding: 12px 24px;
+  background-color: var(--whatsapp-green);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.messagem-input button:hover {
+  background-color: var(--whatsapp-dark-green);
+}
+
+/* Estados Vazios */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-medium);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Scrollbar Moderna */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
