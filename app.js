@@ -42,7 +42,7 @@ async function preencherContatos() {
         contatoDiv.addEventListener('click', () => preencherConversas(contato.name))
 
         const img = document.createElement('img')
-        img.src = './img/user.png' // Todos os contatos usarão essa imagem
+        img.src = './img/user.png' 
         img.alt = contato.name
 
         const nome = document.createElement('span')
